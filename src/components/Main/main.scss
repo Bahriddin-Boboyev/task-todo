@@ -1,0 +1,25 @@
+.hero {
+  &__heading {
+    &-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg * {
+      fill: #386e56;
+    }
+  }
+  &__all-count {
+    color: #6d7471;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
