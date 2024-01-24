@@ -1,5 +1,5 @@
 import './main.scss'
-import { Icons } from '../UI'
+import { Icons, Board } from '..'
 
 export const Main = () => {
 
@@ -9,10 +9,11 @@ export const Main = () => {
       <div className='hero__heading-box'>
         <h2 className="hero__heading">Заявки</h2>
         <div className="hero__dot">
-          <Icons.dotIcon />
+          <Icons.Dot />
         </div>
         <span className="hero__all-count">22</span>
       </div>
+      <Board />
     </main>
 
   )
