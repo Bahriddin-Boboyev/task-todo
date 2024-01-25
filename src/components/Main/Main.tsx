@@ -1,9 +1,8 @@
 import './main.scss'
 import { Icons, Board } from '..'
+import { BoardItem } from '../../constants'
 
 export const Main = () => {
-
-
   return (
     <main className="hero">
       <div className='hero__heading-box'>
@@ -13,7 +12,14 @@ export const Main = () => {
         </div>
         <span className="hero__all-count">22</span>
       </div>
-      <Board />
+      <ul className='board-list'>
+        {
+          BoardItem.map(item => (
+            <Board data={item} key={item.id} />
+          ))
+        }
+      </ul>
+
     </main>
 
   )

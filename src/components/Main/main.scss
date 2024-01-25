@@ -23,4 +23,10 @@
     font-size: 24px;
     font-weight: 500;
   }
+
+  .board-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
 }
