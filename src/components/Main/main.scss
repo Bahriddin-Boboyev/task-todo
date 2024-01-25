@@ -1,4 +1,7 @@
 .hero {
+  position: relative;
+  z-index: -2;
+  margin-left: calc(200px);
   &__heading {
     &-box {
       display: flex;

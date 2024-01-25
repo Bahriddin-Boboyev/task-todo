@@ -44,12 +44,19 @@ a {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .content {
   display: flex;
+  position: relative;
 }
-
 .main-content {
   flex-grow: 1;
   padding: 0 32px;
