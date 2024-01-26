@@ -5,9 +5,9 @@ import { BoardType } from '../types/main';
 export const initialValues = {
   boardItems: [],
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  getItems: (value: object) => {},
+  getItems: (_value: object) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  draggableCard: (value: { id1: string; id2: string }) => {},
+  draggableCard: (_value: { id1: string; id2: string }) => {},
 };
 
 export const AppContext = createContext(initialValues);

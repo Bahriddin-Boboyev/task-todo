@@ -2,7 +2,6 @@ import { useEffect, useRef, useContext, MouseEvent } from 'react';
 import {} from 'react';
 import './main.scss';
 import { Icons, Board } from '..';
-// import { BoardType } from '../../types/main';
 import { AppContext } from '../../store';
 import { IBoardItem } from '../../types/main';
 
@@ -19,11 +18,11 @@ export const Main = () => {
   const star = useRef('');
   const end = useRef('');
 
-  const handleDragStart = (e: MouseEvent<HTMLLIElement>, id: string) => {
+  const handleDragStart = (_: MouseEvent<HTMLLIElement>, id: string) => {
     star.current = id;
   };
 
-  const handleDragEnter = (e: MouseEvent<HTMLLIElement>, id: string) => {
+  const handleDragEnter = (_: MouseEvent<HTMLLIElement>, id: string) => {
     end.current = id;
   };
 
