@@ -1,9 +1,9 @@
 import { useEffect, useRef, useContext, MouseEvent } from 'react';
-import {} from 'react';
 import './main.scss';
 import { Icons, Board } from '..';
 import { AppContext } from '../../store';
 import { IBoardItem } from '../../types/main';
+import { calcCardCount } from '../../utils';
 
 export const Main = () => {
   const state = useContext(AppContext);
@@ -39,7 +39,7 @@ export const Main = () => {
         <div className="hero__dot">
           <Icons.Dot />
         </div>
-        <span className="hero__all-count">22</span>
+        <span className="hero__all-count">{calcCardCount(state.boardItems)}</span>
       </div>
       <ul className="board-list">
         {state.boardItems.map((item: IBoardItem, index) => (
