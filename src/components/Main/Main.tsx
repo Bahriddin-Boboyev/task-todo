@@ -1,8 +1,8 @@
-import { useEffect, useRef, useContext, MouseEvent } from 'react';
+import { useEffect, useContext } from 'react';
 import './main.scss';
 import { Icons, Board } from '..';
 import { AppContext } from '../../store';
-import { IBoardItem } from '../../types/main';
+import { IBoardItem } from '../../types';
 import { calcCardCount } from '../../utils';
 
 export const Main = () => {
@@ -15,23 +15,6 @@ export const Main = () => {
       .catch((err) => console.error(err));
   }, []);
 
-  const star = useRef('');
-  const end = useRef('');
-
-  const handleDragStart = (_: MouseEvent<HTMLLIElement>, id: string) => {
-    star.current = id;
-  };
-
-  const handleDragEnter = (_: MouseEvent<HTMLLIElement>, id: string) => {
-    end.current = id;
-  };
-
-  const handleDragEnd = () => {
-    if (end.current && star.current) {
-      state.draggableCard({ id1: end.current, id2: star.current });
-    }
-  };
-
   return (
     <main className="hero">
       <div className="hero__heading-box">
@@ -43,14 +26,7 @@ export const Main = () => {
       </div>
       <ul className="board-list">
         {state.boardItems.map((item: IBoardItem, index) => (
-          <Board
-            data={item}
-            parentIndex={index}
-            key={item.id}
-            handleDragEnd={handleDragEnd}
-            handleDragEnter={handleDragEnter}
-            handleDragStart={handleDragStart}
-          />
+          <Board data={item} key={item.id} index={index} />
         ))}
       </ul>
     </main>

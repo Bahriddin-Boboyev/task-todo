@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { DRAGGABLE_ITEMS, GET_ITEMS } from '../store';
 
 export interface ICard {
   id: string,
@@ -19,8 +19,20 @@ export interface IBoardItem {
 
 export type BoardType = IBoardItem[]
 
-export interface IDragEvents {
-  handleDragEnter: (e: MouseEvent<HTMLLIElement>, id: string) => void;
-  handleDragStart: (e: MouseEvent<HTMLLIElement>, id: string) => void;
-  handleDragEnd: (e: MouseEvent<HTMLLIElement>, id: string) => void;
-}
+// store types
+export type State = {
+  boardItems: BoardType;
+  getItems: (value: object) => void;
+};
+
+export type Action = {
+  type: typeof GET_ITEMS | typeof DRAGGABLE_ITEMS;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  payload: any;
+};
+
+export type draggableCardValueType = {
+  itemId: string;
+  index: number;
+  boardIndex: number;
+};

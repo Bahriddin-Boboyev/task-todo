@@ -115,16 +115,7 @@
     {
       "id": 3,
       "title": "Закрытые",
-      "cards": [{
-        "id": "ajd9954c6-7795-4759-bedc-7cae16b4dba48",
-        "name": "Freshers",
-        "description": "Finance",
-        "tag": "Второстепенная",
-        "userCount": 3,
-        "fileCount": 182,
-        "userName": "Jacob Jones",
-        "avatar": "img/avatar-10.png"
-      }]
+      "cards": []
     },
     {
       "id": 4,

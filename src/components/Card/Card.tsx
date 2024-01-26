@@ -1,22 +1,20 @@
 // import { useRef } from 'react';
 import { Icons } from '..';
-import { ICard, IDragEvents } from '../../types/main';
+import { ICard } from '../../types';
 import './card.scss';
 
-interface Props extends IDragEvents {
+interface Props {
   data: ICard;
+  parentIndex: number;
 }
 
-export const Card = ({ data, handleDragStart, handleDragEnd, handleDragEnter }: Props) => {
+export const Card = ({ data, parentIndex }: Props) => {
   return (
     <li
       id={data.id}
       className="card"
       draggable
-      onDragStart={(e) => handleDragStart(e, data.id)}
-      onDragEnd={(e) => handleDragEnd(e, data.id)}
-      onDragLeave={(e) => handleDragEnter(e, data.id)}
-      onDragOver={(e) => e.preventDefault()}
+      onDragStart={(e) => e.dataTransfer.setData('text', JSON.stringify({ id: data.id, parentIndex }))}
     >
       <div className="card__title-box">
         <h4 className="card__title">{data.name}</h4>

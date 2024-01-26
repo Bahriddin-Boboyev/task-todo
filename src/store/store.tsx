@@ -1,27 +1,16 @@
 import { createContext, useReducer, ReactNode } from 'react';
 import { GET_ITEMS, DRAGGABLE_ITEMS } from './actions';
-import { BoardType } from '../types/main';
+import { State, Action, BoardType, ICard, draggableCardValueType } from '../types';
 
 export const initialValues = {
   boardItems: [],
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   getItems: (_value: object) => {},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  draggableCard: (_value: { id1: string; id2: string }) => {},
+  draggableCard: (_value: draggableCardValueType) => {},
 };
 
 export const AppContext = createContext(initialValues);
-
-type State = {
-  boardItems: BoardType;
-  getItems: (value: object) => void;
-};
-
-type Action = {
-  type: typeof GET_ITEMS | typeof DRAGGABLE_ITEMS;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  payload: any;
-};
 
 function reducer(state: State, action: Action) {
   switch (action.type) {
@@ -44,33 +33,16 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     });
   };
 
-  const draggableCard = ({ id1, id2 }: { id1: string; id2: string }) => {
-    const item1: number[] = [];
-    const item2: number[] = [];
-
-    (state.boardItems as BoardType).forEach((item, index) => {
-      if (state.boardItems[index].cards[item.cards.findIndex((i) => i.id === id1)]) {
-        item1.push(
-          index,
-          item.cards.findIndex((i) => i.id === id1),
-        );
-      }
-      if (state.boardItems[index].cards[item.cards.findIndex((i) => i.id === id2)]) {
-        item2.push(
-          index,
-          item.cards.findIndex((i) => i.id === id2),
-        );
-      }
-    });
-
-    if (state.boardItems[item1[0]]?.cards[item1[1]] && state.boardItems[item2[0]]?.cards[item2[1]]) {
-      const boardItems = [...state.boardItems];
-      const temp = boardItems[item1[0]].cards[item1[1]];
-      boardItems[item1[0]].cards[item1[1]] = boardItems[item2[0]].cards[item2[1]];
-      boardItems[item2[0]].cards[item2[1]] = temp;
-
-      dispatch({ payload: boardItems, type: DRAGGABLE_ITEMS });
-    }
+  const draggableCard = ({ itemId, index, boardIndex }: draggableCardValueType) => {
+    let tempItem = {};
+    const newBoardItems = state.boardItems as BoardType;
+    (newBoardItems[index].cards = newBoardItems[index].cards.filter((cardItem) => {
+      if (cardItem.id !== itemId) return cardItem;
+      tempItem = cardItem;
+      return;
+    })),
+      newBoardItems[boardIndex].cards.push(tempItem as ICard);
+    dispatch({ payload: newBoardItems, type: DRAGGABLE_ITEMS });
   };
 
   return (
