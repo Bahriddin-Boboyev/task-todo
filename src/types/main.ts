@@ -1,5 +1,7 @@
+import { MouseEvent } from 'react';
+
 export interface ICard {
-  id: number,
+  id: string,
   name: string,
   description: string,
   tag: string,
@@ -16,3 +18,9 @@ export interface IBoardItem {
 }
 
 export type BoardType = IBoardItem[]
+
+export interface IDragEvents {
+  handleDragEnter: (e: MouseEvent<HTMLLIElement>, id: string) => void;
+  handleDragStart: (e: MouseEvent<HTMLLIElement>, id: string) => void;
+  handleDragEnd: (e: MouseEvent<HTMLLIElement>, id: string) => void;
+}

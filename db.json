@@ -1,0 +1,166 @@
+{
+  "boardItem": [
+    {
+      "id": 1,
+      "title": "Новые",
+      "cards": [
+        {
+          "id": "28418afa-eca4-408b-b9d0-e6ba895c1a9d",
+          "name": "UI/UX дизайнер",
+          "description": "Отдел разработки мобильного приложения",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 255,
+          "userName": "Алексей Щербаков",
+          "avatar": "img/avatar-1.png"
+        },
+        {
+          "id": "5c403cb2-1082-4960-bfa0-7005026750fb",
+          "name": "Маркетолог",
+          "description": "Отдел маркетинга",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Floyd Miles",
+          "avatar": "img/avatar-2.png"
+        },
+        {
+          "id": "4d06a194-2d86-4204-b40b-b83d1765af04",
+          "name": "Отдел продаж",
+          "description": "Отдел маркетинга",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 255,
+          "userName": "Theresa Webb",
+          "avatar": "img/avatar-3.png"
+        },
+        {
+          "id": "9a1ceab8-d6f9-4d40-9934-394875744744",
+          "name": "UI/UX дизайнер",
+          "description": "Отдел разработки мобильного приложения",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Vanessa Johnson",
+          "avatar": "img/avatar-4.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Текущие",
+      "cards": [
+        {
+          "id": "31972cc9-1320-43d7-b313-98ac3c5ada9a",
+          "name": "PHP Developer",
+          "description": "Housekeepers",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Kristin Watson",
+          "avatar": "img/avatar-5.png"
+        },
+        {
+          "id": "8dddf9e7-af8f-4a85-9380-99bfd075a71e",
+          "name": "Freshers",
+          "description": "Finance",
+          "tag": "Второстепенная",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Jacob Jones",
+          "avatar": "img/avatar-6.png"
+        },
+        {
+          "id": "907b6d4e-4453-4742-9726-3bf337dd0b46",
+          "name": "UI UX Designer",
+          "description": "Management",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Wade Warren",
+          "avatar": "img/avatar-7.png"
+        },
+        {
+          "id": "da4c6bbf-b59a-4924-9069-990f251a47a2",
+          "name": "Joomla Developer",
+          "description": "Accounting",
+          "tag": "Второстепенная",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Cameron Williamson",
+          "avatar": "img/avatar-8.png"
+        },
+        {
+          "id": "b2459369-9ebb-4c55-83d9-b98df571aa98",
+          "name": "Python Developer",
+          "description": "Laundry",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Devon Lane",
+          "avatar": "img/avatar-9.png"
+        },
+        {
+          "id": "5a6054c6-7795-4759-bedc-7cae16b4300f",
+          "name": "Freshers",
+          "description": "Finance",
+          "tag": "Второстепенная",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Jacob Jones",
+          "avatar": "img/avatar-10.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Закрытые",
+      "cards": [{
+        "id": "ajd9954c6-7795-4759-bedc-7cae16b4dba48",
+        "name": "Freshers",
+        "description": "Finance",
+        "tag": "Второстепенная",
+        "userCount": 3,
+        "fileCount": 182,
+        "userName": "Jacob Jones",
+        "avatar": "img/avatar-10.png"
+      }]
+    },
+    {
+      "id": 4,
+      "title": "Архив",
+      "cards": [
+        {
+          "id": "a43c91c1-8447-47a1-81ad-f7b15bcd80b6",
+          "name": "UX Architect",
+          "description": "Housekeeping management",
+          "tag": "В приоритете",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Guy Hawkins",
+          "avatar": "img/avatar-11.png"
+        },
+        {
+          "id": "00cbe7f5-115c-4c52-bf4f-dea9e0ddff9f",
+          "name": "Human Resource",
+          "description": "Operations",
+          "tag": "Срочная заявка",
+          "userCount": 3,
+          "fileCount": 182,
+          "userName": "Annette Black",
+          "avatar": "img/avatar-12.png"
+        },
+        {
+          "id": "eee3298f-d4b5-4a18-893d-f97e051ee10e",
+          "name": "Python Developer",
+          "description": "Restaurant Management",
+          "tag": "Срочная заявка",
+          "userCount": 3,
+          "fileCount": 255,
+          "userName": "Esther Howard",
+          "avatar": "img/avatar-13.png"
+        }
+      ]
+    }
+  ]
+}
