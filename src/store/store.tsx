@@ -1,6 +1,6 @@
 import { createContext, useReducer, ReactNode } from 'react';
 import { GET_ITEMS, DRAGGABLE_ITEMS } from './actions';
-import { State, Action, BoardType, ICard, draggableCardValueType } from '../types';
+import { State, Action, BoardType, ICard, draggableCardValueType } from '@/types/index';
 
 export const initialValues = {
   boardItems: [],

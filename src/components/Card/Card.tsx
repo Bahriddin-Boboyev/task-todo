@@ -1,6 +1,6 @@
 // import { useRef } from 'react';
 import { Icons } from '..';
-import { ICard } from '../../types';
+import { ICard } from '@/types/index';
 import './card.scss';
 
 interface Props {

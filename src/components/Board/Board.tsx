@@ -1,10 +1,10 @@
 import './board.scss';
 import { Icons } from '../UI';
 import { Card, EmptyCard } from '..';
-import { IBoardItem } from '../../types';
-import { useScrollFixed } from '../../hooks';
+import { IBoardItem } from '@/types/index';
+import { useScrollFixed } from '@/hooks/index';
 import { DragEvent, useContext } from 'react';
-import { AppContext } from '../../store';
+import { AppContext } from '@/store/index';
 
 interface Props {
   data: IBoardItem;
