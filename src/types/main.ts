@@ -21,12 +21,12 @@ export type BoardType = IBoardItem[]
 
 // store types
 export type State = {
-  boardItems: BoardType;
+  boardItems: BoardType | [];
   getItems: (value: object) => void;
 };
 
 export type Action = {
-  type: typeof GET_ITEMS | typeof DRAGGABLE_ITEMS;
+  type: typeof GET_ITEMS | typeof DRAGGABLE_ITEMS
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload: any;
 };

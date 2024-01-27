@@ -1,12 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext, useReducer, ReactNode } from 'react';
 import { GET_ITEMS, DRAGGABLE_ITEMS } from './actions';
 import { State, Action, BoardType, ICard, draggableCardValueType } from '@/types/index';
 
 export const initialValues = {
-  boardItems: [],
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  boardItems: [] as BoardType,
   getItems: (_value: object) => {},
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   draggableCard: (_value: draggableCardValueType) => {},
 };
 

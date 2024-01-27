@@ -1,7 +1,7 @@
-// import { useRef } from 'react';
 import { Icons } from '..';
 import { ICard } from '@/types/index';
 import './card.scss';
+import { DragEvent, useState } from 'react';
 
 interface Props {
   data: ICard;
@@ -9,12 +9,20 @@ interface Props {
 }
 
 export const Card = ({ data, parentIndex }: Props) => {
+  const [isDraggable, setIsDraggable] = useState(false);
+
+  const handleDragStart = (e: DragEvent<HTMLLIElement>) => {
+    setIsDraggable(true);
+    e.dataTransfer.setData('text', JSON.stringify({ id: data.id, parentIndex }));
+  };
+
   return (
     <li
       id={data.id}
-      className="card"
+      className={`card ${isDraggable ? 'draggable' : ''}`}
       draggable
-      onDragStart={(e) => e.dataTransfer.setData('text', JSON.stringify({ id: data.id, parentIndex }))}
+      onDragStart={handleDragStart}
+      onDragEnd={() => setIsDraggable(false)}
     >
       <div className="card__title-box">
         <h4 className="card__title">{data.name}</h4>
@@ -34,7 +42,7 @@ export const Card = ({ data, parentIndex }: Props) => {
       </div>
       <div className="card__avatar-box">
         <div className="img-box">
-          <img src={data.avatar} alt="avatar-1" />
+          <img src={data.avatar} alt="avatar-1" draggable={false} />
         </div>
         <div className="desc-box">
           <span>Рекруитер</span>
